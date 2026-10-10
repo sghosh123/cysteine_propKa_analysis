@@ -2,9 +2,7 @@
 
 **Version 0.1.0 · Python · PROPKA output analysis · MDAnalysis (optional)**
 
-A reproducible toolkit for analyzing cysteine pKa estimates across MD-derived structures, comparing apo/complex states, extracting cysteine pKa records from PROPKA reports, and characterizing the local environment around a cysteine sulfur atom.
-
-This repository was assembled from the supplied `propKa_cys.zip` and the Wilson MBD1/MBD2/MBD3 apo archives. It replaces duplicated histogram and neighbor scripts with parameterized commands, retains curated original result files with SHA-256 provenance, and documents limitations where original topology/trajectory files were absent.
+Analyzing cysteine pKa estimates across MD-derived structures, comparing apo/complex states, extracting cysteine pKa records from PROPKA reports, and characterizing the local environment around a cysteine sulfur atom.
 
 ## Scope
 
