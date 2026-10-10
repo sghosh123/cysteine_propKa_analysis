@@ -1,0 +1,163 @@
+propka3.0, revision 182                                                                      2021-11-22
+-------------------------------------------------------------------------------------------------------
+--                                                                                                   --
+--                                   PROPKA: A PROTEIN PKA PREDICTOR                                 --
+--                                                                                                   --
+--                                VERSION 1.0,  04/25/2004, IOWA CITY                                --
+--                                             BY HUI LI                                             --
+--                                                                                                   --
+--                               VERSION 2.0,  11/05/2007, IOWA CITY/COPENHAGEN                      --
+--                                BY DELPHINE C. BAS AND DAVID M. ROGERS                             --
+--                                                                                                   --
+--                              VERSION 3.0,  xx/xx/2010, COPENHAGEN                                 --
+--                              BY MATS H.M. OLSSON AND CHRESTEN R. SONDERGARD                       --
+--                                                                                                   --
+-------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------
+ References:
+
+   Very Fast Empirical Prediction and Rationalization of Protein pKa Values
+   Hui Li, Andrew D. Robertson and Jan H. Jensen
+   PROTEINS: Structure, Function, and Bioinformatics 61:704-721 (2005)
+   
+   Very Fast Prediction and Rationalization of pKa Values for Protein-Ligand Complexes
+   Delphine C. Bas, David M. Rogers and Jan H. Jensen
+   PROTEINS: Structure, Function, and Bioinformatics 73:765-783 (2008)
+   
+   PROPKA3: Consistent Treatment of Internal and Surface Residues in Empirical pKa predictions
+   Mats H.M. Olsson, Chresten R. Sondergard, Michal Rostkowski, and Jan H. Jensen
+   Journal of Chemical Theory and Computation, to be submitted (2010)
+-------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------
+ WARNING !
+
+   Propka3.0 is not identical to propka2.0 and does not work with ligands
+-------------------------------------------------------------------------------------------------------
+
+
+writing pkafile out.pka
+   ---------------------    --------------    --------------    --------------
+                            DESOLVATION  EFFECTS       SIDECHAIN          BACKBONE        COULOMBIC
+ RESIDUE    pKa    BURIED     REGULAR      RE        HYDROGEN BOND     HYDROGEN BOND      INTERACTION
+---------  -----   ------   ---------   ---------    --------------    --------------    --------------
+
+ASP  10 P   6.25    67 %    1.88  469   0.40    0    0.00 XXX   0 X    0.00 XXX   0 X    0.18 ASP  67 P
+
+ASP  48 P   5.94    45 %    4.25  407   0.23    0   -0.81 THR   2 P    0.00 XXX   0 X   -0.12 N+    1 P
+ASP  48 P                                           -0.85 LYS  32 P    0.00 XXX   0 X   -0.55 LYS  32 P
+
+ASP  63 P   5.28    45 %    1.22  406   0.41    0    0.00 XXX   0 X    0.00 XXX   0 X   -0.13 LYS  28 P
+ASP  63 P                                            0.00 XXX   0 X    0.00 XXX   0 X   -0.02 ARG  58 P
+
+ASP  67 P   4.90    33 %    0.95  375   0.15    0    0.00 XXX   0 X    0.00 XXX   0 X    0.00 XXX   0 X
+
+ASP  72 P   4.22     0 %    0.18  208   0.00    0    0.00 XXX   0 X    0.00 XXX   0 X    0.24 C-   72 P
+
+GLU   4 P   7.24    73 %    3.85  485   0.06    0   -0.61 ARG  35 P    0.00 XXX   0 X    0.45 GLU  46 P
+GLU   4 P                                            0.00 XXX   0 X    0.00 XXX   0 X   -1.02 ARG  35 P
+
+GLU  22 P   6.65    80 %    2.03  504   0.28    0   -0.12 GLN  19 P    0.00 XXX   0 X   -0.04 LYS  27 P
+
+GLU  46 P   6.41    58 %    3.05  443   0.17    0   -0.80 SER  33 P    0.00 XXX   0 X   -0.17 LYS  32 P
+GLU  46 P                                            0.00 XXX   0 X    0.00 XXX   0 X   -0.42 ARG  35 P
+GLU  46 P                                            0.00 XXX   0 X    0.00 XXX   0 X    0.08 ASP  48 P
+
+GLU  55 P   5.11    44 %    2.79  405   0.00    0   -1.50 ARG  58 P    0.00 XXX   0 X   -0.68 ARG  58 P
+
+GLU  62 P   6.18    48 %    2.18  415   0.34    0   -0.65 ARG  58 P    0.00 XXX   0 X    0.17 GLU  55 P
+GLU  62 P                                            0.00 XXX   0 X    0.00 XXX   0 X    0.12 ASP  63 P
+GLU  62 P                                            0.00 XXX   0 X    0.00 XXX   0 X    0.17 ASP  67 P
+GLU  62 P                                            0.00 XXX   0 X    0.00 XXX   0 X   -0.65 ARG  58 P
+
+C-   72 P   3.10     5 %    0.60  296   0.00    0   -0.70 SER  71 P    0.00 XXX   0 X    0.00 XXX   0 X
+
+CYS  14 P   8.68     0 %    0.50  240   0.00    0   -0.82 THR  13 P    0.00 XXX   0 X    0.00 XXX   0 X
+
+CYS  17 P  15.71    88 %    7.28  528   0.00    0    0.00 XXX   0 X   -0.67 THR  13 P    0.10 CYS  14 P
+
+TYR  47 P  15.48    96 %    5.48  550   0.00    0    0.00 XXX   0 X    0.00 XXX   0 X    0.00 XXX   0 X
+
+LYS  27 P  10.27     7 %   -0.27  301   0.00    0    0.00 XXX   0 X    0.00 XXX   0 X    0.04 GLU  22 P
+
+LYS  28 P   9.40    53 %   -1.22  431   0.00    0    0.00 XXX   0 X    0.00 XXX   0 X    0.13 ASP  63 P
+
+LYS  32 P  10.50    31 %   -1.57  367   0.00    0    0.85 ASP  48 P    0.00 XXX   0 X    0.17 GLU  46 P
+LYS  32 P                                            0.00 XXX   0 X    0.00 XXX   0 X    0.55 ASP  48 P
+
+ARG  35 P  11.12    80 %   -3.42  506   0.00    0    0.61 GLU   4 P    0.00 XXX   0 X    0.42 GLU  46 P
+ARG  35 P                                            0.00 XXX   0 X    0.00 XXX   0 X    1.02 GLU   4 P
+
+ARG  58 P  13.66    62 %   -2.35  455   0.00    0    1.50 GLU  55 P    0.00 XXX   0 X    0.02 ASP  63 P
+ARG  58 P                                            0.65 GLU  62 P    0.00 XXX   0 X    0.68 GLU  55 P
+ARG  58 P                                            0.00 XXX   0 X    0.00 XXX   0 X    0.65 GLU  62 P
+
+N+    1 P   7.53     0 %   -0.54  256   0.00    0    0.00 XXX   0 X    0.00 XXX   0 X   -0.06 LYS  32 P
+N+    1 P                                            0.00 XXX   0 X    0.00 XXX   0 X    0.12 ASP  48 P
+
+--------------------------------------------------------------------------------------------------------
+SUMMARY OF THIS PREDICTION
+     RESIDUE    pKa   pKmodel   ligand atom-type
+   ASP  10 P    6.25      3.80
+   ASP  48 P    5.94      3.80
+   ASP  63 P    5.28      3.80
+   ASP  67 P    4.90      3.80
+   ASP  72 P    4.22      3.80
+   GLU   4 P    7.24      4.50
+   GLU  22 P    6.65      4.50
+   GLU  46 P    6.41      4.50
+   GLU  55 P    5.11      4.50
+   GLU  62 P    6.18      4.50
+   C-   72 P    3.10      3.20
+   CYS  14 P    8.68      9.00
+   CYS  17 P   15.71      9.00
+   TYR  47 P   15.48     10.00
+   LYS  27 P   10.27     10.50
+   LYS  28 P    9.40     10.50
+   LYS  32 P   10.50     10.50
+   ARG  35 P   11.12     12.50
+   ARG  58 P   13.66     12.50
+   N+    1 P    7.53      8.00
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+Free energy of   folding (kcal/mol) as a function of pH (using neutral reference)
+  0.00      7.92
+  1.00      7.92
+  2.00      7.96
+  3.00      8.34
+  4.00     10.98
+  5.00     17.95
+  6.00     25.35
+  7.00     29.18
+  8.00     29.89
+  9.00     29.86
+ 10.00     30.34
+ 11.00     31.65
+ 12.00     33.47
+ 13.00     36.12
+ 14.00     39.32
+
+The pH of optimum stability is  0.0 for which the free energy is   7.9 kcal/mol at 298K
+Could not determine pH values where the free energy is within 80 % of maximum
+Could not determine where the free energy is positive
+
+Protein charge of folded and unfolded state as a function of pH
+    pH  unfolded  folded
+  0.00      6.00    6.00
+  1.00      5.98    5.99
+  2.00      5.85    5.92
+  3.00      4.78    5.47
+  4.00      0.87    4.47
+  5.00     -3.49    2.53
+  6.00     -4.83   -0.48
+  7.00     -5.09   -3.70
+  8.00     -5.70   -5.71
+  9.00     -7.09   -6.99
+ 10.00     -9.04   -8.41
+ 11.00    -11.23  -10.00
+ 12.00    -12.38  -10.85
+ 13.00    -13.51  -11.17
+ 14.00    -13.94  -11.74
+The pI is  5.86 (folded) and  3.80 (unfolded)

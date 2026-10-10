@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cysteine-protonation-analysis"
+version = "0.1.0"
+description = "Reproducible analysis tools for framewise cysteine pKa estimates and local structural environments"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.23", "matplotlib>=3.6"]
+
+[project.optional-dependencies]
+analysis = ["MDAnalysis>=2.6"]
+test = ["pytest>=7", "MDAnalysis>=2.6"]
+
+[project.scripts]
+cpa = "cysteine_protonation_analysis.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
